@@ -43,6 +43,15 @@ class TeamXAgentBridge:
             f"الرسالة المعالجة: '{message}'"
         )
         return response
+import requests
+
+def send_signal_to_webhook(self, data: dict):
+    webhook_url = "https://webhook.site/13268c6a-a633-4503-9669-26438251e51a"
+    try:
+        response = requests.post(webhook_url, json=data)
+        logging.info(f"تم إرسال الإشارة بنجاح إلى الـ Webhook. الكود: {response.status_code}")
+    except Exception as e:
+        logging.error(f"فشل إرسال الإشارة: {str(e)}")
 
 if __name__ == "__main__":
     bridge = TeamXAgentBridge()
