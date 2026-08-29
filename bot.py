@@ -6,7 +6,6 @@ Core ID: 75685
 import os
 import logging
 from datetime import datetime
-from typing import Dict, Any, Optional
 import requests
 from flask import Flask, request, jsonify
 
