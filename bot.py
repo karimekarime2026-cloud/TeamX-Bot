@@ -30,7 +30,7 @@ class TeamXAgentBridge:
         self.team_name: str = "Team X Intelligence"
         self.mode: str = "Stealth & Exclusive"
         self.webhook_url: str = "https://webhook.site/13268c6a-a633-4503-9669-26438251e51a"
-        logging.info("تم تفعيل جسر الأمان وقنوات الاتصال بنجاح.")
+        logging.info("تم تفعيل النواة وجسر الأمان بنجاح.")
 
     def process_incoming_signal(self, sender_id: str, message: str) -> str:
         logging.info(f"معالجة إشارة واردة من المعرّف: {sender_id}")
